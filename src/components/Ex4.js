@@ -12,6 +12,15 @@ function Ex4() {
     setAge(age+1)
   }
 
+  const userAge = `karthik age is ${age} years`
+
+  // useCallback will return a memoized version of the callback that only changes if one of the inputs has changed.
+
+  const updateAge = useCallback(() => {
+    return userAge
+
+  },[age])
+
   
   return (
    <div className="container">
@@ -21,7 +30,7 @@ function Ex4() {
         </div>
     </div>
     <Age age={age} ageHandler={incrementAge} />
-    <AgeInfo/>
+    <AgeInfo ageInfo={updateAge}/>
    </div>
   )
 }

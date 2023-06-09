@@ -1,9 +1,11 @@
 import React from 'react'
 
-function AgeInfo() {
+function AgeInfo(props) {
   return (
-    <div>
-      AgeInfo
+    <div  className='row'>
+      <div className="col-md-12 text-success">
+        <h3 className="display-3 text-warning"> { props.ageInfo() } </h3>
+      </div>
     </div>
   )
 }
